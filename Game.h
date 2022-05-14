@@ -7,14 +7,13 @@
 #include "Player.h"
 #include "Character.h"
 
-
-
 class Game
 {
 private:
     std::vector<Character> characterList;
     Player currentPlayers[2];
     int choice;
+
 public:
     Game();
 
