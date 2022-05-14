@@ -2,7 +2,6 @@
 #define PLAYER_H
 
 #include "Character.h"
-#include "Game.h"
 #include <iostream>
 #include <string>
 
