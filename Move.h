@@ -43,10 +43,34 @@ class DwarfMoves : public Move
 
 class ArcherMoves : public Move
 {
-    public:
-        void attack();
-        void heal();
-        void special();
+private:
+    
+public:
+    virtual void DoMove() = 0;
+    ~DoMove();
+protected:
+    std::string moveName;
+    std::string moveDescription;
 };
 
+
+class Attack: public Move
+{
+private:
+    int AttackAmount;
+
+public:
+    void DoMove();   
+
+};
+
+class Heal: public Move
+{
+private:
+    int HealAmount;
+
+public:
+    void DoMove();   
+
+};
 #endif
