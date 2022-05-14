@@ -7,10 +7,7 @@ Attack::Attack(std::string name, std::string description, int strength)
     damage = strength;
 }
 
-Attack::Attack()
-{
-    Attack("null", "null", 1);
-}
+Attack::Attack() : {Attack("null", "null", 1);}
 
 int Attack::getDamage(){return damage;}
 
