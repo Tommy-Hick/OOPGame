@@ -1,15 +1,16 @@
 #include "Display.h"
 #include "Game.h"
 #include <stdlib.h>
+#include <chrono>
+#include <thread>
 
-Display::Display(){
-
-}
+Display::Display(){}
 
 void Display::characterSelection(Game game){
 
-    std::cout<<"Select character for player one: "<<std::endl;
-
+    std::cout<<"Select character for player one out of the list below: "<< "\n" << std::endl;
+    std::cout << "Character list: " << std::endl;
+    
     for (int i = 0; i < game.getNumCharacters(); i++)
     {
 
@@ -22,9 +23,11 @@ void Display::characterSelection(Game game){
 
     int index = game.getInput(game.getNumCharacters())-1;
     game.getPlayer(0).applyCharacter(game.getCharacter(index));
+    system("clear");
+
+    std::cout<<"Player one has chosen "<< game.getCharacter(index).getName()<< "\n" << std::endl;
     
-    std::cout<<"Player one has chosen "<< game.getCharacter(index).getName()<<std::endl;
-    
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     std::cout<<"Select character for player two: "<<std::endl;
 
@@ -36,11 +39,20 @@ void Display::characterSelection(Game game){
     game.getPlayer(1).applyCharacter(game.getCharacter(index));
     std::cout<<"Player two has chosen "<< game.getCharacter(index).getName()<<std::endl;
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+    system("clear");
     fight(game);
     
 }
 
 void Display::menu(Game game){
+    system("clear");
+
+    std::cout<<"Welcome to Mortal OOPbat! \n";
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
     std::cout<<"Menu: \n"
             <<"1. Play\n"
             <<"2. Quit"<<std::endl;
@@ -48,6 +60,7 @@ void Display::menu(Game game){
     switch (input)
     {
     case 1:
+        system("clear");
         characterSelection(game);
         break;
 
@@ -61,7 +74,9 @@ void Display::menu(Game game){
 }
 
 void Display::fight(Game game){
-    std::cout<<"Fight!"<<std::endl;
+    std::cout<<"Fight!\n"<<std::endl;
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     std::cout<<"Choose move for player one: \n"
             <<"1. Attack\n"

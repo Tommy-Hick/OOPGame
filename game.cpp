@@ -24,6 +24,7 @@ Player Game::getPlayer(int index) { return currentPlayers[index]; }
 int Game::getInput(int range)
 {
     bool invalidChoice = true;
+    std::cout<<"Enter: ";
     while (invalidChoice)
     {
         choice = 0;

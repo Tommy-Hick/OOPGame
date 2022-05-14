@@ -18,6 +18,11 @@ public:
     int getHp();
     int getStrength();
     int getSpeed();
+    int* Character::getHealthPtr();
+
+    virtual void setStrength()=0;
+     virtual void setHealth()=0;
+      virtual void setSpeed()=0;
 
     ~Character();
 
