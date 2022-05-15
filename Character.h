@@ -8,6 +8,7 @@ class Character
 private:
 protected:
     std::string name;
+    static int full_hp;
     int hp;
     int strength;
     int speed;
