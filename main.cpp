@@ -11,6 +11,10 @@ int main()
     Game game;
     Display display;
 
+    //Character giant("Giant", 100, 40, 20);
+    //Character dwarf("Dwarf", 40, 10, 50);
+
+    //add characters to character selection
     game.addCharacter(Character("Giant", 100, 40, 20));
     game.addCharacter(Character("Dwarf", 40, 10, 50));
 
@@ -21,9 +25,9 @@ int main()
     //game.updatePlayer(James, 1);
 
     //std::cout << Josh.getHp() << std::endl;
+<<<<<<< HEAD
 
     display.menu(game);
-
+>>>>>>> function working
 
     return 0;
-}
