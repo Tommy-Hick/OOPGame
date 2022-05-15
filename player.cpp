@@ -6,6 +6,9 @@ Player::Player(std::string name, Character character)
     applyCharacter(character);
 }
 
+Player::Player() : Character(std::string name,int hp,int strength,int speed){}
+
+
 Player::Player() {name = "default";}
 
 void Player::setSpeed(int speed) { this->speed = speed; }
