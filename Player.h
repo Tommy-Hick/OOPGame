@@ -12,12 +12,11 @@ private:
 
 public:
     Player();
-   // Player(std::string name): Character(){} ; //why the fuck is this in the constructor? player is constructed via a player??
 
     void setStrength(int strength);
     void setSpeed(int speed);
     void setHp(int hp);
-    void applyCharacter();
+    void applyCharacter(Character character);
 
     ~Player();
 };

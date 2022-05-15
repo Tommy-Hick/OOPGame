@@ -12,7 +12,6 @@ void Game::addCharacter(Character newCharacter)
 void Game::updatePlayer(Player player, int index)
 {
     currentPlayers[index] = player;
-    // assert(currentPlayers[index].getName() == player.getName());
 }
 
 int Game::getNumCharacters() { return characterList.size(); }

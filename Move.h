@@ -6,13 +6,26 @@
 #include <string>
 #include "Player.h"
 
-class Move // : public Character
+class Move
 {
 private:
 public:
-    virtual void attack(Player player1, Player player2, int order);
-    virtual void heal(Player player);
-    virtual void special(int returnAttack());
+    virtual void executeMove() = 0;
+};
+
+class Attack : public Move
+{
+private:
+public:
+    void executeMove(Player player1, Player player2);
+};
+
+
+class Heal : public Move
+{
+private:
+public:
+    void executeMove(Player player);
 };
 
 #endif

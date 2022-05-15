@@ -1,15 +1,6 @@
 #include "Player.h"
 
-Player::Player(std::string name, Character character)
-{
-    this->name = name;
-    applyCharacter(character);
-}
-
-Player::Player() : Character(std::string name,int hp,int strength,int speed){}
-
-
-Player::Player() {name = "default";}
+Player::Player(){}
 
 void Player::setSpeed(int speed) { this->speed = speed; }
 void Player::setStrength(int strength) { this->strength = strength; }
