@@ -9,7 +9,7 @@ void Game::addCharacter(Character newCharacter)
     characterList.push_back(newCharacter);
 }
 
-void Game::updatePlayer(Player* playerPtr, int index)
+void Game::updatePlayer(Player *playerPtr, int index)
 {
     currentPlayerPtrs[index] = playerPtr;
 }
@@ -23,7 +23,7 @@ Player Game::getPlayer(int index) { return *currentPlayerPtrs[index]; }
 int Game::getInput(int range)
 {
     bool invalidChoice = true;
-    std::cout<<"Enter: ";
+    std::cout << "Enter: ";
     while (invalidChoice)
     {
         choice = 0;
@@ -40,5 +40,32 @@ int Game::getInput(int range)
     return choice;
 }
 
+void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
+{
+    Attack attack;
+    Heal heal;
+    if (currentPlayerPtrs[0]->getSpeed() > currentPlayerPtrs[1]->getSpeed())
+    {
+        if (p1MoveChoice == 1)
+        {
+            attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
+        else
+        {
+            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
+    }
+    else
+    {
+        if (p2MoveChoice == 1)
+        {
+            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+        else
+        {
+            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+    }
+}
 
 Game::~Game() {}

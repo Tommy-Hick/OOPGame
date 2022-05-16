@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon May 16 10:18:14 2022
+# Make data base, printed on Mon May 16 18:25:12 2022
 
 # Variables
 
@@ -38,7 +38,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-cf03efca-9b73-4268-8f9b-8e487c67b038.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-b91a99a9-2da4-4b5c-b65c-47ff5ed99b9a.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -132,7 +132,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41191
+VSCODE_PID = 61159
 # variable set hash-table stats:
 # Load=61/1024=6%, Rehash=0, Collisions=1/84=1%
 
@@ -142,9 +142,9 @@ VSCODE_PID = 41191
 
 # Directories
 
-# . (device 16777230, inode 12201001): 18 files, no impossibilities.
+# . (device 16777230, inode 12201001): 17 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -181,7 +181,7 @@ git:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 17:26:51
+#  Last modified 2022-05-16 18:24:44
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -198,7 +198,7 @@ run:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 8):
-	g++ character.cpp player.cpp display.cpp game.cpp main.cpp
+	g++ character.cpp player.cpp display.cpp move.cpp game.cpp main.cpp
 	
 
 # files hash-table stats:
@@ -214,7 +214,7 @@ run:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon May 16 10:18:14 2022
+# Finished Make data base on Mon May 16 18:25:12 2022
 
  
 make: *** No rule to make target `all'.  Stop.
