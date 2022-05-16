@@ -17,19 +17,15 @@ class Attack : public Move
 {
 private:
 public:
-    void executeMove(Player player1, Player player2);
+    void executeMove(Player &player1, Player &player2);
 };
 
 class Heal : public Move
 {
 private:
 public:
-    void executeMove(Player player);
+    void executeMove(Player &player);
 };
 
-void Heal::executeMove(Player player)
-{
-    *player.getHealthPtr() - 
-}
 
 #endif

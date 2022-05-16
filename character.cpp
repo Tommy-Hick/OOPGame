@@ -1,6 +1,6 @@
 #include "Character.h"
 
-
+//Character constructor
 Character::Character(std::string name, int full_hp, int strength, int speed)
 {
     this->name= name;

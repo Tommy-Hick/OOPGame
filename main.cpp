@@ -15,13 +15,13 @@ int main()
     game.addCharacter(Character("Dwarf", 40, 10, 50));
 
     Player player1;
-    Player palyer2;
+    Player* player1ptr = &player1;
 
-    player1ptr = *P
     Player player2;
+    Player* player2ptr = &player2;	
 
-    game.updatePlayer(player1, 0);
-    game.updatePlayer(player2, 1);
+    game.updatePlayer(player1ptr, 0);
+    game.updatePlayer(player2ptr, 1);
 
     display.menu(game);
 
