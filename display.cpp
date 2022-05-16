@@ -17,9 +17,9 @@ void Display::characterSelection(){
     {
 
         std::cout<<i+1<<". "<<game.getCharacter(i).getName()<<std::endl;
-        std::cout<<"HP: "<<game.getCharacter(i).getHp()<<std::endl;
-        std::cout<<"Speed: "<<game.getCharacter(i).getSpeed()<<std::endl;
-        std::cout<<"Strength: "<<game.getCharacter(i).getStrength()<<std::endl;
+        std::cout<<"\tHP: \t"<<game.getCharacter(i).getHP()<<std::endl;
+        std::cout<<"\tSpeed: \t"<<game.getCharacter(i).getSpeed()<<std::endl;
+        std::cout<<"\tStrength: \t"<<game.getCharacter(i).getStrength()<<std::endl;
         std::cout<< "\n"; 
     }
 
@@ -36,7 +36,12 @@ void Display::characterSelection(){
     for (int i = 0; i < game.getNumCharacters(); i++)
     {
         std::cout<<i+1<<". "<<game.getCharacter(i).getName()<<std::endl;
+        std::cout<<"\tHP: \t"<<game.getCharacter(i).getHP()<<std::endl;
+        std::cout<<"\tSpeed: \t"<<game.getCharacter(i).getSpeed()<<std::endl;
+        std::cout<<"\tStrength: \t"<<game.getCharacter(i).getStrength()<<std::endl;
+        std::cout<< "\n"; 
     }
+    
     index = game.getInput(game.getNumCharacters())-1;
     game.getPlayer(1).applyCharacter(game.getCharacter(index));
     std::cout<<"Player two has chosen "<< game.getCharacter(index).getName()<<std::endl;

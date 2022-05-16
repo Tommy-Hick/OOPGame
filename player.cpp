@@ -11,7 +11,7 @@ void Player::applyCharacter(Character character)
 {
     setSpeed(character.getSpeed());
     setStrength(character.getStrength());
-    setHp(character.getHp());
+    setHP(character.getHp());
     this->full_hp = character.getHp();
 }
 

@@ -15,7 +15,7 @@ Character::Character(){Character("null",1,1,1);}
 
 //Get functions for character that returns the character's stats
 std::string Character::getName(){return this->name;}
-int Character::getHp() { return this->hp; }
+int Character::getHP() { return this->hp; }
 int Character::getStrength() { return this->strength; }
 int Character::getSpeed() { return this->speed; }
 int Character::getFullHP(){return this->full_hp; }

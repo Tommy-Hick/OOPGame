@@ -21,7 +21,7 @@ public:
     Character(std::string name,int full_hp,int strength,int speed); //Constructor for Character class that takes in the character's name, health, strength and speed
 
     std::string getName(); //returns the string for name
-    int getHp(); //returns current value of hp
+    int getHP(); //returns current value of hp
     int getFullHP(); //returns the value of the characters full hp
     int getStrength(); //returns the value of strength in character
     int getSpeed(); //returns the value of speed
