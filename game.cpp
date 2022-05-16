@@ -29,7 +29,7 @@ int Game::getInput(int range)
     {
         choice = 0;
         std::cin >> choice;
-        if (choice > 0 && choice <= range && typeid(range).name() == "i" )
+        if (choice > 0 && choice <= range )
         {
             invalidChoice = false;
         }
