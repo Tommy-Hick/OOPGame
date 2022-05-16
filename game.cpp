@@ -45,7 +45,7 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
     Attack attack;
     Heal heal;
-    if (currentPlayerPtrs[0]->getSpeed() > currentPlayerPtrs[1]->getSpeed())
+    if (currentPlayerPtrs[0]->getSpeed() >= currentPlayerPtrs[1]->getSpeed())
     {
         if (p1MoveChoice == 1)
         {
