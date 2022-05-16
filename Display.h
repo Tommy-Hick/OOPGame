@@ -10,12 +10,15 @@
 class Display
 {
 private:
-
+    Game game;
 public:
     Display();
-    void characterSelection(Game game);
-    void menu(Game game);
-    void fight(Game game);
+    Display(Game game);
+    void characterSelection();
+    void DisplayCharacterStats();
+    void menu();
+    void fight();
+    void HUD();
     ~Display();
 };
 

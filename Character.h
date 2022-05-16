@@ -13,21 +13,20 @@ private:
 protected:
     std::string name; //Name of character
     int full_hp; //Complete health points of character -- >Remains unchanged<
-    int hp; //Health points that scales with player with each round of fighting
+    int hp; //current hp
     int strength; //How much damage a player is able to deal to another character
     int speed; //Determines the speed of a player, where faster players attack first
 public:
-    Character(); //Default constructor for character object
-    Character(std::string name,int hp,int strength,int speed); //Constructor for Character that takes in the name, health, strength and speed of
-                                                                
-    std::string getName();
-    
-    int getHp();
-    int getStrength();
-    int getSpeed();
-    int* getHealthPtr();
+    Character(); //Default constructor for Character class
+    Character(std::string name,int full_hp,int strength,int speed); //Constructor for Character class that takes in the character's name, health, strength and speed
 
-   ~Character();
+    std::string getName(); //returns the string for name
+    int getHP(); //returns current value of hp
+    int getFullHP(); //returns the value of the characters full hp
+    int getStrength(); //returns the value of strength in character
+    int getSpeed(); //returns the value of speed
+
+   ~Character(); //Default destructor for character class
 
 };
 

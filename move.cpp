@@ -1,11 +1,26 @@
 #include "Move.h"
 
-void Heal::executeMove(Player player)
+void Heal::executeMove(Player &player1, Player &player2)
 {
-    *player.getHealthPtr() + (1/4)*player.getHp();
+    int playerNewHP = player1.getHP() + player1.getFullHP()*(1/4);
+
+    if ( playerNewHP > player1.getFullHP())
+    {
+        playerNewHP = player1.getFullHP();
+    }
+
+    player1.setHP(playerNewHP);
 }
 
-void Attack::executeMove(Player player1, Player player2)
+void Attack::executeMove(Player &attackingPlayer, Player &victim)
 {
-    *player2.getHealthPtr() - player1.getStrength();
+    int attackMultiplier = 1;
+    int victimNewHP = victim.getHP() - attackingPlayer.getStrength()*attackMultiplier;
+
+    if (victimNewHP < 0)
+    {
+        victimNewHP = 0;
+    }
+    
+    victim.setHP(victimNewHP);   
 }

@@ -5,4 +5,4 @@ git:
 	git pull
 
 run:
-	g++ character.cpp player.cpp display.cpp game.cpp main.cpp
+	g++ character.cpp player.cpp display.cpp move.cpp game.cpp main.cpp

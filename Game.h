@@ -6,12 +6,13 @@
 #include <vector>
 #include "Player.h"
 #include "Character.h"
+#include "Move.h"
 
 class Game
 {
 private:
     std::vector<Character> characterList;
-    Player currentPlayers[2];
+    Player* currentPlayerPtrs[2];
     int choice;
 
 public:
@@ -23,8 +24,10 @@ public:
     int getInput(int range);
 
     void addCharacter(Character newCharacter);
-    void updatePlayer(Player player, int index);
+    void updatePlayer(Player* playerPtr, int index);
+    void executeTurn( int p1MoveChoice, int p2MoveChoice);
 
     ~Game();
 };
+
 #endif
