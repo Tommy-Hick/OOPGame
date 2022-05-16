@@ -43,8 +43,11 @@ int Game::getInput(int range)
 
 void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
+    //declare attack and heal variables
     Attack attack;
     Heal heal;
+
+    
     if (currentPlayerPtrs[0]->getSpeed() >= currentPlayerPtrs[1]->getSpeed())
     {
         if (p1MoveChoice == 1)
@@ -67,6 +70,13 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
             heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
         }
     }
+
+    if (p1MoveChoice == 1)
+
+    
+    
+    // place what moves players used
+    std::cout << "Player 1 used: " ;
 }
 
 Game::~Game() {}

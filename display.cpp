@@ -35,7 +35,7 @@ void Display::menu(){
     }
 }
 
-void Display::DisplayCharacterStats()
+void Display::displayCharacterStats()
 {
     for (int i = 0; i < game.getNumCharacters(); i++)
     {
@@ -48,12 +48,56 @@ void Display::DisplayCharacterStats()
 
 }
 
+void Display::displayPlayerMoves(int p1MoveChoice, int p2MoveChoice)
+{
+     if (p1MoveChoice == 1)
+     {
+        std::cout << "Player 1 attacked Player 2!" << std::endl;
+
+     }
+     else
+     {
+         std::cout << "Player 1 Healed themselves!" << std::endl;
+     }
+
+     if (p2MoveChoice == 1)
+     {
+        std::cout << "Player 2 attacked Player 1!" << std::endl;
+
+     }
+     else
+     {
+         std::cout << "Player 2 Healed themselves!" << std::endl;
+     }
+     
+}
+
+ void Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
+ {
+     if (game.getPlayer(0).getHP() == 0)
+     {
+        std::cout << "Player 2 wins!!!\n"; 
+        displayCharacterStats() ;
+     }
+     else if(game.getPlayer(1).getHP() == 0)
+     {
+         std::cout << "Player 1 wins!!!\n"; 
+        displayCharacterStats() ;
+     }
+     else
+     {
+         displayPlayerMoves(p1MoveChoice, p2MoveChoice);
+         HUD();
+     }
+     
+ }
+
 void Display::characterSelection(){
 
     std::cout<<"Select character for player one out of the list below: "<< "\n" << std::endl;
     std::cout << "Character list: " << std::endl;
     
-    DisplayCharacterStats();
+    displayCharacterStats();
 
     int index = game.getInput(game.getNumCharacters())-1;
     game.getPlayer(0).applyCharacter(game.getCharacter(index));
@@ -65,7 +109,7 @@ void Display::characterSelection(){
 
     std::cout<<"Select character for player two: "<<std::endl;
 
-    DisplayCharacterStats();
+    displayCharacterStats();
     
     index = game.getInput(game.getNumCharacters())-1;
     game.getPlayer(1).applyCharacter(game.getCharacter(index));
@@ -82,13 +126,13 @@ void Display::characterSelection(){
 
 void Display::fight(){
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
-    system("clear");
+    HUD();
 
-    std::cout<<"Choose move for player one: \n"
+    std::cout<<"\nChoose move for player one: \n"
             <<"1. Attack\n"
-            <<"2. Heal"<<std::endl;
+            <<"2. Heal\n"<<std::endl;
 
     int p1MoveChoice = game.getInput(2);
 
@@ -99,11 +143,20 @@ void Display::fight(){
     int p2MoveChoice = game.getInput(2);
 
     game.executeTurn(p1MoveChoice, p2MoveChoice);
+    displayCurrentStats(p1MoveChoice, p2MoveChoice);
 
-    // dislay fight results
+    // display fight results
 }
 
 void Display::HUD(){
+
+    system("clear");
+
+    std::cout<<"Player1 HP: "<<game.getPlayer(0).getHP()
+                            <<"/"<<game.getPlayer(0).getFullHP();
+    
+    std::cout<<"\tPlayer2 HP: "<<game.getPlayer(1).getHP()
+                            <<"/"<<game.getPlayer(1).getFullHP();                     
     
 }
 

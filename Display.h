@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Game.h"
+#include "move.h"
 #include "Character.h"
 #include "Player.h"
 
@@ -15,10 +16,11 @@ public:
     Display();
     Display(Game game);
     void characterSelection();
-    void DisplayCharacterStats();
-    void DisplayCurrentStats();
+    void displayCharacterStats();
+    void displayCurrentStats(int p1MoveChoice, int p2MoveChoice);
     void menu();
     void fight();
+    void displayPlayerMoves(int p1MoveChoice, int p2MoveChoice);
     void HUD();
     ~Display();
 };

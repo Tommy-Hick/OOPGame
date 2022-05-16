@@ -19,7 +19,7 @@ public:
 
     void applyCharacter(Character character); //initialises a player object by taking in a character type
 
-    ~Player();
+    ~Player(); //Default destructor for player classes
 };
 
 #endif
