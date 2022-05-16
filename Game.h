@@ -11,7 +11,7 @@ class Game
 {
 private:
     std::vector<Character> characterList;
-    Player* currentPlayers[2];
+    Player* currentPlayerPtrs[2];
     int choice;
 
 public:
@@ -19,11 +19,11 @@ public:
 
     int getNumCharacters();
     Character getCharacter(int index);
-    Player getPlayerPtr(int index);
+    Player getPlayer(int index);
     int getInput(int range);
 
     void addCharacter(Character newCharacter);
-    void updatePlayer(Player* player, int index);
+    void updatePlayer(Player* playerPtr, int index);
 
     ~Game();
 };

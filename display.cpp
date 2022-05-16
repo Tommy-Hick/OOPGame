@@ -6,7 +6,9 @@
 
 Display::Display(){}
 
-void Display::characterSelection(Game game){
+Display::Display(Game game){this-> game = game;}
+
+void Display::characterSelection(){
 
     std::cout<<"Select character for player one out of the list below: "<< "\n" << std::endl;
     std::cout << "Character list: " << std::endl;
@@ -42,11 +44,11 @@ void Display::characterSelection(Game game){
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     system("clear");
-    fight(game);
+    fight();
     
 }
 
-void Display::menu(Game game){
+void Display::menu(){
     system("clear");
 
     std::cout<<"Welcome to Mortal OOPbat! \n";
@@ -61,7 +63,7 @@ void Display::menu(Game game){
     {
     case 1:
         system("clear");
-        characterSelection(game);
+        characterSelection();
         break;
 
     case 2:
@@ -73,7 +75,7 @@ void Display::menu(Game game){
     }
 }
 
-void Display::fight(Game game){
+void Display::fight(){
     std::cout<<"Fight!\n"<<std::endl;
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -92,7 +94,7 @@ void Display::fight(Game game){
 }
 
 void Display::HUD(){
-    
+
 }
 
 Display::~Display()

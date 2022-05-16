@@ -13,10 +13,11 @@ private:
 public:
     Player(); //Default player constructor
 
-    void setStrength(int strength);
-    void setSpeed(int speed);
-    void setHp(int hp);
-    void applyCharacter(Character character);
+    void setStrength(int strength); //initialises the value of strength
+    void setSpeed(int speed); //initialises the value of speed
+    void setHp(int hp); //initialises the value of strength
+
+    void applyCharacter(Character character); //initialises a player object by taking in a character type
 
     ~Player();
 };
