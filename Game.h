@@ -42,7 +42,7 @@ void Game::executeTurn(int input1, int input2)
         else
         {
             Heal heal;
-            heal.executeMove(*currentPlayerPtrs[0])
+            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
         }
         
     }

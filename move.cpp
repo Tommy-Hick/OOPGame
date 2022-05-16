@@ -1,15 +1,15 @@
 #include "Move.h"
 
-void Heal::executeMove(Player &player)
+void Heal::executeMove(Player &player1, Player &player2)
 {
-    int playerNewHP = player.getHP() + player.getFullHP()*(1/4);
+    int playerNewHP = player1.getHP() + player1.getFullHP()*(1/4);
 
-    if ( playerNewHP > player.getFullHP())
+    if ( playerNewHP > player1.getFullHP())
     {
-        playerNewHP = player.getFullHP();
+        playerNewHP = player1.getFullHP();
     }
 
-    player.setHP(playerNewHP);
+    player1.setHP(playerNewHP);
 }
 
 void Attack::executeMove(Player &attackingPlayer, Player &victim)
