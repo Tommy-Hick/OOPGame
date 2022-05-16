@@ -15,6 +15,7 @@ public:
     Display();
     Display(Game game);
     void characterSelection();
+    void DisplayCharacterStats();
     void menu();
     void fight();
     void HUD();

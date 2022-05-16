@@ -40,5 +40,37 @@ int Game::getInput(int range)
     return choice;
 }
 
+//deals with players move choice
+void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
+{
+    if (currentPlayerPtrs[0]->getSpeed() >= currentPlayerPtrs[1]->getSpeed())
+    {
+        if (p1MoveChoice = 1)
+        {
+            Attack attack;
+            attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
+        else
+        {
+            Heal heal;
+            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
+        
+    }
+    else 
+    {
+        if (p2MoveChoice = 1)
+        {
+            Attack attack;
+            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+        else
+        {
+            Heal heal;
+            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+    }
+
+}
 
 Game::~Game() {}

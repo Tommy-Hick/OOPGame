@@ -8,6 +8,20 @@ Display::Display(){}
 
 Display::Display(Game game){this-> game = game;}
 
+void Display::DisplayCharacterStats()
+{
+    for (int i = 0; i < game.getNumCharacters(); i++)
+    {
+
+        std::cout<<i+1<<". "<<game.getCharacter(i).getName()<<std::endl;
+        std::cout<<"\tHP: \t"<<game.getCharacter(i).getHP()<<std::endl;
+        std::cout<<"\tSpeed: \t"<<game.getCharacter(i).getSpeed()<<std::endl;
+        std::cout<<"\tStrength:\t \t"<<game.getCharacter(i).getStrength()<<std::endl;
+        std::cout<< "\n"; 
+    }
+
+}
+
 void Display::characterSelection(){
 
     std::cout<<"Select character for player one out of the list below: "<< "\n" << std::endl;
