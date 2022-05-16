@@ -22,6 +22,5 @@ void Attack::executeMove(Player &attackingPlayer, Player &victim)
         victimNewHP = 0;
     }
     
-    
     victim.setHP(victimNewHP);   
 }
