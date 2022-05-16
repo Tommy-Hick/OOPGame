@@ -20,7 +20,7 @@ public:
 
     int getNumCharacters();
     Character getCharacter(int index);
-    Player getPlayer(int index);
+    Player* getPlayer(int index);
     int getInput(int range);
 
     void addCharacter(Character newCharacter);

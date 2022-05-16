@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Game.h"
-#include "move.h"
+#include "Move.h"
 #include "Character.h"
 #include "Player.h"
 
@@ -17,7 +17,7 @@ public:
     Display(Game game);
     void characterSelection();
     void displayCharacterStats();
-    void displayCurrentStats(int p1MoveChoice, int p2MoveChoice);
+    bool displayCurrentStats(int p1MoveChoice, int p2MoveChoice);
     void menu();
     void fight();
     void displayPlayerMoves(int p1MoveChoice, int p2MoveChoice);

@@ -12,7 +12,7 @@ int main()
     Game game;
 
     game.addCharacter(Character("Giant", 100, 40, 20));
-    game.addCharacter(Character("Dwarf", 40, 10, 50));
+    game.addCharacter(Character("Dwarf", 600, 10, 50));
 
     Player player1;
     Player* player1ptr = &player1;
@@ -24,8 +24,7 @@ int main()
     game.updatePlayer(player2ptr, 1);
 
     Display display(game);
-    std::cout << "Player 1: " << player1.getHP() << std::endl;
-    std::cout << "Player 2: " << player2.getHP() << std::endl;
+
     display.menu();
 
     return 0;

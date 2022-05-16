@@ -19,7 +19,7 @@ int Game::getNumCharacters() { return characterList.size(); }
 
 Character Game::getCharacter(int index) { return characterList[index]; }
 
-Player Game::getPlayer(int index) { return *currentPlayerPtrs[index]; }
+Player* Game::getPlayer(int index) { return currentPlayerPtrs[index]; }
 
 int Game::getInput(int range)
 {
@@ -43,7 +43,7 @@ int Game::getInput(int range)
 
 void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
-    //declare attack and heal variables
+    //instanitate attack and heal objects
     Attack attack;
     Heal heal;
 
@@ -58,6 +58,15 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
         {
             heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
         }
+
+       if (p2MoveChoice == 1)
+        {
+            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+        else
+        {
+            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
     }
     else
     {
@@ -69,14 +78,17 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
         {
             heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
         }
+
+        if (p1MoveChoice == 1)
+        {
+            attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
+        else
+        {
+            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        }
     }
 
-    if (p1MoveChoice == 1)
-
-    
-    
-    // place what moves players used
-    std::cout << "Player 1 used: " ;
 }
 
 Game::~Game() {}
