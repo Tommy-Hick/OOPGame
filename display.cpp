@@ -19,7 +19,7 @@ void Display::characterSelection(){
         std::cout<<i+1<<". "<<game.getCharacter(i).getName()<<std::endl;
         std::cout<<"\tHP: \t"<<game.getCharacter(i).getHP()<<std::endl;
         std::cout<<"\tSpeed: \t"<<game.getCharacter(i).getSpeed()<<std::endl;
-        std::cout<<"\tStrength: \t"<<game.getCharacter(i).getStrength()<<std::endl;
+        std::cout<<"\tStrength:\t \t"<<game.getCharacter(i).getStrength()<<std::endl;
         std::cout<< "\n"; 
     }
 
@@ -49,6 +49,7 @@ void Display::characterSelection(){
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     system("clear");
+    std::cout<<"Fight!\n"<<std::endl;
     fight();
     
 }
@@ -81,9 +82,10 @@ void Display::menu(){
 }
 
 void Display::fight(){
-    std::cout<<"Fight!\n"<<std::endl;
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+    system("clear");
 
     std::cout<<"Choose move for player one: \n"
             <<"1. Attack\n"
@@ -96,10 +98,14 @@ void Display::fight(){
             <<"2. Heal"<<std::endl;
 
     int input2 = game.getInput(2);
+
+    game.executeTurn(input1, input2);
+
+    // dislay fight results
 }
 
 void Display::HUD(){
-
+    
 }
 
 Display::~Display()

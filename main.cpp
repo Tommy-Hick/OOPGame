@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "Move.h"
 #include "Player.h"
 #include "Character.h"
 #include "Game.h"
@@ -28,10 +29,6 @@ int main()
     display.menu();
 
     
-
-
-    
-
 
     return 0;
 }
