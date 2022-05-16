@@ -17,7 +17,7 @@ protected:
     int strength; //How much damage a player is able to deal to another character
     int speed; //Determines the speed of a player, where faster players attack first
 public:
-    Character();
+    Character(); //Default Constructor for
     Character(std::string name,int hp,int strength,int speed);
     std::string getName();
     
