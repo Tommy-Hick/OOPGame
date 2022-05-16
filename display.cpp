@@ -91,6 +91,10 @@ void Display::fight(Game game){
     int input2 = game.getInput(2);
 }
 
+void Display::HUD(){
+    
+}
+
 Display::~Display()
 {
 }

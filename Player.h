@@ -16,6 +16,7 @@ public:
     void setStrength(int strength);
     void setSpeed(int speed);
     void setHp(int hp);
+    void setFullHp(int full_hp);
     void applyCharacter(Character character);
 
     ~Player();

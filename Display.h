@@ -16,6 +16,7 @@ public:
     void characterSelection(Game game);
     void menu(Game game);
     void fight(Game game);
+    void HUD(Game game);
     ~Display();
 };
 

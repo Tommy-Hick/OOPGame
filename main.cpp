@@ -15,6 +15,9 @@ int main()
     game.addCharacter(Character("Dwarf", 40, 10, 50));
 
     Player player1;
+    Player palyer2;
+
+    player1ptr = *P
     Player player2;
 
     game.updatePlayer(player1, 0);

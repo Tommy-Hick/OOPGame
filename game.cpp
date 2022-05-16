@@ -9,7 +9,7 @@ void Game::addCharacter(Character newCharacter)
     characterList.push_back(newCharacter);
 }
 
-void Game::updatePlayer(Player player, int index)
+void Game::updatePlayer(Player* player, int index)
 {
     currentPlayers[index] = player;
 }
@@ -18,7 +18,7 @@ int Game::getNumCharacters() { return characterList.size(); }
 
 Character Game::getCharacter(int index) { return characterList[index]; }
 
-Player Game::getPlayer(int index) { return currentPlayers[index]; }
+Player Game::getPlayerPtr(int index) { return currentPlayers[index]; }
 
 int Game::getInput(int range)
 {
