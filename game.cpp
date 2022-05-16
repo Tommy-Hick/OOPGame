@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <typeinfo>
 #include <iostream>
 #include <cassert>
 
@@ -28,7 +29,7 @@ int Game::getInput(int range)
     {
         choice = 0;
         std::cin >> choice;
-        if (choice > 0 && choice <= range)
+        if (choice > 0 && choice <= range && typeid(range).name() == "i" )
         {
             invalidChoice = false;
         }
