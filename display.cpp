@@ -103,7 +103,6 @@ void Display::displayPlayerMoves(int p1MoveChoice, int p2MoveChoice)
 void Display::characterSelection(){
 
     std::cout<<"Select character for player one out of the list below: "<< "\n" << std::endl;
-    std::cout << "Character list: " << std::endl;
     
     displayCharacterStats();
 
@@ -115,7 +114,7 @@ void Display::characterSelection(){
     
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
-    std::cout<<"Select character for player two: "<<std::endl;
+    std::cout<<"Select character for player two: \n"<<std::endl;
 
     displayCharacterStats();
     

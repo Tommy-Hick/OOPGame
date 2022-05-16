@@ -11,15 +11,15 @@
 class Game
 {
 private:
-    std::vector<Character> characterList;
-    Player* currentPlayerPtrs[2];
-    int choice;
+    std::vector<Character> characterList; //List of characters
+    Player* currentPlayerPtrs[2]; //stores location of player object
+    int choice; //stores current 
 
 public:
-    Game();
+    Game(); //Default game constructor
 
-    int getNumCharacters();
-    Character getCharacter(int index);
+    int getNumCharacters(); //Get the number of characters
+    Character getCharacter(int index); //Get the character
     Player* getPlayer(int index);
     int getInput(int range);
 
