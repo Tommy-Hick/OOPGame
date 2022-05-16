@@ -91,15 +91,15 @@ void Display::fight(){
             <<"1. Attack\n"
             <<"2. Heal"<<std::endl;
 
-    int input1 = game.getInput(2);
+    int p1MoveChoice = game.getInput(2);
 
     std::cout<<"Choose move for player two: \n"
             <<"1. Attack\n"
             <<"2. Heal"<<std::endl;
 
-    int input2 = game.getInput(2);
+    int p2MoveChoice = game.getInput(2);
 
-    game.executeTurn(input1, input2);
+    game.executeTurn(p1MoveChoice, p2MoveChoice);
 
     // dislay fight results
 }

@@ -40,4 +40,5 @@ int Game::getInput(int range)
     return choice;
 }
 
+
 Game::~Game() {}

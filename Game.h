@@ -25,16 +25,16 @@ public:
 
     void addCharacter(Character newCharacter);
     void updatePlayer(Player* playerPtr, int index);
-    void executeTurn( int input1, int input2);
+    void executeTurn( int p1MoveChoice, int p2MoveChoice);
 
     ~Game();
 };
 
-void Game::executeTurn(int input1, int input2)
+void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
     if (currentPlayerPtrs[0]->getSpeed() > currentPlayerPtrs[1]->getSpeed())
     {
-        if (input1 = 1)
+        if (p1MoveChoice = 1)
         {
             Attack attack;
             attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
@@ -46,7 +46,19 @@ void Game::executeTurn(int input1, int input2)
         }
         
     }
-
+    else 
+    {
+        if (p2MoveChoice = 1)
+        {
+            Attack attack;
+            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+        else
+        {
+            Heal heal;
+            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
+        }
+    }
 
 }
 
