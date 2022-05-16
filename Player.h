@@ -11,7 +11,7 @@ class Player : public Character
 private:
 
 public:
-    Player();
+    Player(); //Default player constructor
 
     void setStrength(int strength);
     void setSpeed(int speed);

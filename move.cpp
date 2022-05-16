@@ -2,12 +2,16 @@
 
 void Heal::executeMove(Player &player)
 {
-    player.setHp(player.getHp() + player.getFullHP()*(1/4)) ;
-
+    int playerNewHP = player.getHp() + player.getFullHP()*(1/4);
+    player.setHp(playerNewHP);
 }
-void Attack::executeMove(Player &player1, Player &player2)
+
+void Attack::executeMove(Player &attackingPlayer, Player &victim)
 {
-    int attack_multiplier = 1;
+    int attackMultiplier = 1;
+    int victimNewHP = victim.getHp() - attackingPlayer.getStrength()*attackMultiplier;
+    
+    victim.setHp(victimNewHP);
     
     //*player2.getHealthPtr() - player1.getStrength() * attack_multiplier;
 }
