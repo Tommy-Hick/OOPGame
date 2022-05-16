@@ -30,5 +30,4 @@ public:
     ~Game();
 };
 
-
 #endif
