@@ -28,7 +28,5 @@ int main()
     std::cout << "Player 2: " << player2.getHP() << std::endl;
     display.menu();
 
-    
-
     return 0;
 }

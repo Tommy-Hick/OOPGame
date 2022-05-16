@@ -8,6 +8,33 @@ Display::Display(){}
 
 Display::Display(Game game){this-> game = game;}
 
+void Display::menu(){
+    system("clear");
+
+    std::cout<<"Welcome to Mortal OOPbat! \n";
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+    std::cout<<"Menu: \n"
+            <<"1. Play\n"
+            <<"2. Quit"<<std::endl;
+    int input = game.getInput(2);
+    switch (input)
+    {
+    case 1:
+        system("clear");
+        characterSelection();
+        break;
+
+    case 2:
+        exit(0);
+        break;
+
+    default:
+        break;
+    }
+}
+
 void Display::DisplayCharacterStats()
 {
     for (int i = 0; i < game.getNumCharacters(); i++)
@@ -52,32 +79,6 @@ void Display::characterSelection(){
     
 }
 
-void Display::menu(){
-    system("clear");
-
-    std::cout<<"Welcome to Mortal OOPbat! \n";
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-
-    std::cout<<"Menu: \n"
-            <<"1. Play\n"
-            <<"2. Quit"<<std::endl;
-    int input = game.getInput(2);
-    switch (input)
-    {
-    case 1:
-        system("clear");
-        characterSelection();
-        break;
-
-    case 2:
-        exit(0);
-        break;
-
-    default:
-        break;
-    }
-}
 
 void Display::fight(){
 
